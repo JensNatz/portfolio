@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
+    src: url('./assets/fonts/Montserrat-VF.woff2') format('woff2');
     font-style: normal; 
     font-weight: 100 900; 
     font-display: swap;
@@ -25,6 +25,42 @@ body {
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 16px;
+    color: $color-black;
+}
+
+button {
+    all: unset;
+    padding: 16px 32px;
+    border: 2px solid $base-color;
+    border-radius: 16px;
+    color: $base-color;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-white;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -155%;
+        width: 150%;
+        height: 100%;
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $base-color 6.25%, $base-color 51.56%, $base-color-dark 100%);
+        transform: skewX(-10deg); /* Schräge erzeugen */
+        transition: left 0.5s ease-in-out; /* Animation von links nach rechts */
+        z-index: -1;
+    }
+
+    &:hover::before {
+        left: -25%;
+    }
 }
 
 .bubble {

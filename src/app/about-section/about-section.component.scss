@@ -1,0 +1,59 @@
+@import '../../colors';
+@import '../shared/mixins';
+
+section {
+
+    >div.content {
+        @include flex($align: start);
+        gap: 42px;
+        max-width: 1440px;
+        padding: 124px 32px;
+
+        > div {
+            @include flex($direction: column);
+            flex: 1; 
+        }
+
+        > div.about-text {
+            @include flex($align: start, $direction: column);   
+        }
+    }
+}
+
+div.about-icons {
+    @include flex($justify: space-between);
+    gap: 24px;
+
+    > div.icon {
+        @include flex();
+        gap: 16px;
+
+        > span {
+            color: $base-color;
+            font-size: 18px;
+        }
+    }
+}
+
+p {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+.claim {
+    font-family: 'Baloo';
+    color: $base-color;
+    font-size: 120px;
+    line-height: 104px;
+    margin-bottom: 32px;
+}
+
+.i-am {
+    font-family: 'Baloo';
+    color: $base-color;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
