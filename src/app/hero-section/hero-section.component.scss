@@ -1,0 +1,41 @@
+@import '../../colors';
+@import '../shared/mixins';
+
+section {
+    @include flex();
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+
+    >img {
+        height: 100vh;
+        width: auto;
+    }
+
+    >div {
+        @include flex($direction: column);
+
+    }
+}
+
+h1 {
+    font-family: 'Baloo';
+    color: $base-color;
+    font-size: 128px;
+    line-height: 128px;
+    letter-spacing: -2.5%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+span {
+    color: $base-color;
+    font-size: 64px;
+}
+
+.bubble {
+    width: 890px;
+    height: 890px;
+    top: -400px;
+    left: -400px;
+}
