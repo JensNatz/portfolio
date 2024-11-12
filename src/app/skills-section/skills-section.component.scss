@@ -1,0 +1,43 @@
+@import '../../colors';
+@import '../shared/mixins';
+
+section {
+    background: linear-gradient(128.94deg, $base-color -33.96%, $base-color 36.71%, $base-color-dark 112.25%);
+
+    div.content {
+        @include flex($direction: column);
+        max-width: 1440px;
+        padding: 124px 32px;
+
+        > h2 {
+            color: $color-white;
+            margin-bottom: 32px;
+        }
+    }
+
+    div.skills-list {
+        @include flex($align: start);
+        flex-wrap: wrap;
+        max-width: 900px;
+        gap: 72px;
+        
+        > div.skill {
+            @include flex($direction: column);
+            gap: 16px;
+
+            > span {
+                color: $color-white;
+            }
+
+            &:hover {
+                > img {
+                    transform: translateY(-4px) scale(1.05);
+                }
+
+                > span {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

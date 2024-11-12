@@ -1,1 +1,16 @@
-<p>skills-section works!</p>
+<section>
+    <div class="content">
+        <h2>
+            Skill set
+        </h2>
+        <div class="skills-list">
+            @for (item of skills; track item) {
+                <div class="skill">
+                    <img [src]="'../assets/img/' + item.img" alt="{{ item.title }}">
+                    <span>{{ item.title }}</span>
+                </div>
+            }
+    
+        </div>
+    </div>
+</section>
