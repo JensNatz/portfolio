@@ -8,7 +8,7 @@
         </div>
         <div class="project-list">
             @for (item of projects; track item; let i = $index) {
-                <app-project [project]="item" [index]="i" [ngClass]="'project-margin'"></app-project>
+                <app-project [project]="item" [index]="i"></app-project>
             }
         </div>
 

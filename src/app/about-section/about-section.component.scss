@@ -5,7 +5,7 @@ section {
 
     >div.content {
         @include flex($align: start);
-        gap: 42px;
+        gap: 40px;
         max-width: 1440px;
         padding: 124px 32px;
 
@@ -50,7 +50,7 @@ p {
 .i-am {
     font-family: 'Baloo';
     color: $base-color;
-    font-size: 42px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 32px;
 }

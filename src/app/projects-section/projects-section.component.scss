@@ -16,6 +16,8 @@ section {
     }
 }
 
-.project-margin {
-    margin: 36px 0;
+div.project-list {
+    @include flex($direction: column);
+    gap: 64px;
+    margin-top: 40px;
 }
