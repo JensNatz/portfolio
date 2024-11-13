@@ -25,6 +25,11 @@ section {
             @include flex($direction: column);
             gap: 16px;
 
+            > img {
+                height: 75px;
+                width: auto;
+            }
+
             > span {
                 color: $color-white;
             }

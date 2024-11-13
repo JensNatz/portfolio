@@ -1,0 +1,16 @@
+<section>
+    <div class="content">
+        <div class="headline-area">
+            <h2>My work</h2>
+            <p>
+                Explore a selection of my work here - Interact with the projects to see my skills in action.
+            </p>
+        </div>
+        <div class="project-list">
+            @for (item of projects; track item; let i = $index) {
+                <app-project [project]="item" [index]="i" [ngClass]="'project-margin'"></app-project>
+            }
+        </div>
+
+    </div>
+</section>

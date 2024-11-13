@@ -33,6 +33,10 @@ export class SkillsSectionComponent {
       img: 'typescript.svg'
     },
     {
+      title: 'SCSS',
+      img: 'scss.svg'
+    },
+    {
       title: 'Firebase',
       img: 'firebase.svg'
     },

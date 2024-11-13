@@ -34,8 +34,19 @@ h2 {
     letter-spacing: 0.01em;
 }
 
-button {
-    all: unset;
+h3 {
+    font-family: 'Baloo';
+    font-size: 48px;
+}
+
+
+p {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.button {
+    text-decoration: none;
     padding: 16px 32px;
     border: 2px solid $base-color;
     border-radius: 16px;
@@ -47,8 +58,12 @@ button {
     transition: color 0.3s ease;
 
     &:hover {
-        cursor: pointer;
         color: $color-white;
+    }
+
+    &:visited {
+        text-decoration: none;
+        color: $base-color;
     }
 
     &::before {
@@ -59,8 +74,8 @@ button {
         width: 150%;
         height: 100%;
         background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $base-color 6.25%, $base-color 51.56%, $base-color-dark 100%);
-        transform: skewX(-10deg); /* Schräge erzeugen */
-        transition: left 0.5s ease-in-out; /* Animation von links nach rechts */
+        transform: skewX(-10deg); 
+        transition: left 0.5s ease-in-out;
         z-index: -1;
     }
 

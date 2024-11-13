@@ -1,0 +1,21 @@
+@import '../../colors';
+@import '../shared/mixins';
+
+section {
+    div.content {
+        max-width: 1440px;
+        padding: 124px 32px;
+
+        div.headline-area {
+            width: 50%;
+
+            > h2 {
+                color: $base-color;
+            }
+        }
+    }
+}
+
+.project-margin {
+    margin: 36px 0;
+}
