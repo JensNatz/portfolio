@@ -1,8 +1,7 @@
-@import '../../colors';
-@import '../shared/mixins';
+@import '../../../../colors';
+@import '../../../shared/mixins';
 
 section {
-    background: linear-gradient(128.94deg, $base-color -33.96%, $base-color 36.71%, $base-color-dark 112.25%);
 
     div.content {
         @include flex($direction: column);

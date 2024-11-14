@@ -1,0 +1,16 @@
+@import '../../../../colors';
+@import '../../../shared/mixins';
+
+
+footer {
+    padding: 124px 32px;
+
+    div.content {
+        @include flex($direction: column);
+        max-width: 1440px;
+    }
+}
+
+a {
+    color: $color-white;
+}

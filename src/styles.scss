@@ -11,12 +11,12 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('./assets/fonts/Montserrat-VF.woff2') format('woff2');
-    font-style: normal; 
-    font-weight: 100 900; 
+    font-style: normal;
+    font-weight: 100 900;
     font-display: swap;
-  }
+}
 
-  *{
+* {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -46,8 +46,26 @@ p {
     line-height: 28px;
 }
 
-.button {
+a {
+    text-decoration: none;
+    color: $base-color;
+
+    &:visited {
+        text-decoration: none;
+        color: $base-color;
+    }
+
+    &:hover {
+        text-decoration: none;
+        font-weight: 700;
+        color: $base-color-dark;
+    }
+}
+
+.button, button {
+    all:unset;
     @include flex();
+    cursor: pointer;
     text-decoration: none;
     height: 56px;
     min-width: 244px;
@@ -77,22 +95,65 @@ p {
         width: 150%;
         height: 100%;
         background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $base-color 6.25%, $base-color 51.56%, $base-color-dark 100%);
-        transform: skewX(-10deg); 
+        transform: skewX(-10deg);
         transition: left 0.25s ease-in-out;
         z-index: -1;
     }
 
     &:hover::before {
         left: -25%;
+        border: 2px solid $base-color;
+    }
+}
+
+button:disabled {
+    cursor:not-allowed;
+    border: 2px solid $color-grey;
+    color: $color-grey;
+
+    &::before {
+        display: none
     }
 }
 
 section {
     @include flex();
+
+    >div.content {
+        width: 100%;
+    }
+}
+
+.background-light {
+    background: linear-gradient(179.99deg, $color-white 12.89%, $bask-color-light 91.39%);
+}
+
+.background-dark {
+    background: linear-gradient(128.94deg, $base-color -33.96%, $base-color 36.71%, $base-color-dark 112.25%);
 }
 
 .bubble {
     position: absolute;
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $base-color 6.25%, $base-color 51.56%, $base-color-dark 100%);
     border-radius: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    all: unset;
+    box-sizing: border-box;
+    border: 1px solid $base-color;
+    border-radius: 10px;
+    padding: 16px 24px;
+
+    &:hover {
+        border: 1px solid $base-color-dark;
+        box-shadow: 0 0 0 1px $base-color-dark;
+    }
+
+    &:focus {
+        border: 1px solid $base-color;
+        box-shadow: none;
+    }
 }
