@@ -1,13 +1,27 @@
 @import '../../../../colors';
-@import '../../../shared/mixins';
+@import '../../mixins';
 
 
 footer {
     padding: 124px 32px;
+    @include flex();
 
-    div.content {
+
+    > div.content {
         @include flex($direction: column);
+        width: 100%;
         max-width: 1440px;
+
+
+        > div { 
+            width: 100%;;
+            @include flex($justify: space-between);
+
+            >div.social-icons {
+                @include flex();
+                gap: 16px;
+            }
+        }
     }
 }
 
