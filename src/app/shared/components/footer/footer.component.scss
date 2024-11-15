@@ -1,4 +1,4 @@
-@import '../../../../colors';
+@import '../../variables';
 @import '../../mixins';
 
 
@@ -14,13 +14,23 @@ footer {
 
 
         > div { 
-            width: 100%;;
+            width: 100%;
             @include flex($justify: space-between);
+            position: relative;
 
             >div.social-icons {
                 @include flex();
                 gap: 16px;
+
+               
             }
+
+             > span {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                color: $color-white;
+              }
         }
     }
 }

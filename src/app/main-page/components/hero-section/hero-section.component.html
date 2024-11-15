@@ -2,7 +2,9 @@
 <section class="background-light">
     <div class="bubble"></div>
     <div class="content">
-        <img src="assets/img/portrait.png" alt="It's me!">
+        <div>
+            <img src="assets/img/portrait.png" alt="It's me!"> 
+        </div>
         <div>
             <span>Hello! I am Jens</span>
             <h1>
@@ -11,5 +13,10 @@
                 Developer
             </h1>
         </div>
+    </div>
+    <div class="social-icons">
+        @for (item of socialIcons; track item) {
+            <app-social-icon [icon]="item"></app-social-icon>
+        }
     </div>
 </section>

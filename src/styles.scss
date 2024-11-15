@@ -1,4 +1,4 @@
-@import 'colors';
+@import 'app/shared/variables';
 @import 'app/shared/mixins';
 
 @font-face {
@@ -121,6 +121,16 @@ section {
 
     >div.content {
         width: 100%;
+        max-width: 1440px;
+        padding: 0 32px;
+
+        @media (max-width: $breakpoint-lg) {
+            padding: 0 24px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            padding: 0 12px;
+        }
     }
 }
 

@@ -2,11 +2,11 @@
     <div class="content">
         <div>
             <img src="assets/img/logo.svg" alt="Logo">
-            <span>&copy; Jens Natzschka 2024</span>
+            <span>&copy; {{ year }}</span>
             <div class="social-icons">
-                <a href=""><img src="assets/img/email.svg" alt="Email"></a>
-                <a href=""><img src="assets/img/github.svg" alt="GitHub"></a>
-                <a href=""><img src="assets/img/linkedin.svg" alt="LinkedIn"></a>
+                @for (item of socialIcons; track item) {
+                    <app-social-icon [icon]="item"></app-social-icon>
+                }
             </div>
         </div>
         <a href="">Imprint & Privacy Policy</a>
