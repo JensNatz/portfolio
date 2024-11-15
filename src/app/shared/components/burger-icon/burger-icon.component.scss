@@ -1,0 +1,46 @@
+@import '../../variables';
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    >.line {
+        width: 30px;
+        height: 4px;
+        background-color: $base-color;
+        transition: all 0.25s ease;
+        border-radius: 4px;
+    
+    }
+}
+
+
+.line1 {
+    transform-origin: top left;
+}
+
+.line3 {
+    transform-origin: bottom left;
+}
+
+.burger.active {
+
+    > .line1 {
+        transform: rotate(45deg); 
+        width: 31px;
+    }
+    
+    > .line2 {
+        transform: scaleX(0);
+    }
+    
+    > .line3 {
+        transform: rotate(-45deg);
+        width: 31px;
+    }
+} 

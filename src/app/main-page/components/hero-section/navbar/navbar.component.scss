@@ -9,15 +9,33 @@ nav {
     position: absolute;
     z-index: 2;
 
+    @media (max-width: $breakpoint-md) {
+        height: 96px;
+        padding: 24px;
+    }
+
     >div {
         @include flex($justify: space-between);
         width: 100%;
         max-width: 1440px;
 
+        img {
+            width: 64px;
+            height: auto;
+
+            @media (max-width: $breakpoint-md) {
+                width: 48px;
+            }
+        }
+
         >ul {
             @include flex();
             gap: 24px;
             list-style-type: none;
+
+            @media (max-width: $breakpoint-md) {
+                display: none;
+            }
         }
     }
 }
