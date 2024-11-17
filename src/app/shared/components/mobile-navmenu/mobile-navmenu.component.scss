@@ -1,0 +1,19 @@
+@import '../../variables';
+@import '../../mixins';
+
+nav {
+    @include flex();
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 998;
+
+    >ul {
+        @include flex($direction: column);
+        gap: 24px;
+        list-style-type: none;
+        font-size: 24px;
+
+
+    }
+}

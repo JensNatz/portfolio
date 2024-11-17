@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-burger-icon',
@@ -10,8 +10,10 @@ import { Component } from '@angular/core';
 })
 export class BurgerIconComponent {
   isActive = false;
+  @Output() menuClicked = new EventEmitter<void>();
 
-  toggleClass() {
+  onMenuClick(): void {
     this.isActive = !this.isActive;
+    this.menuClicked.emit();
   }
 }

@@ -5,7 +5,11 @@
             <li class="nav-link"><a href="#">About me</a></li>
             <li class="nav-link"><a href="#">Skillset</a></li>
             <li class="nav-link"><a href="#">My work</a></li>
+            <li class="nav-link"><a href="#">Contact</a></li>
         </ul>
-        <app-burger-icon></app-burger-icon>
+        <div class="menu-icon">
+            <app-burger-icon  (menuClicked)="onMenuToggle()"></app-burger-icon>
+        </div> 
     </div>
 </nav>
+<app-mobile-navmenu></app-mobile-navmenu>
