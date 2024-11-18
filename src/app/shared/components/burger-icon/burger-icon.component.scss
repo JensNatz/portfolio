@@ -12,7 +12,7 @@
     >.line {
         width: 30px;
         height: 4px;
-        background-color: red;
+        background-color: $color-white;
         transition: all 0.25s ease;
         border-radius: 4px;
     
@@ -29,6 +29,10 @@
 }
 
 .burger.active {
+
+    > .line {
+        background-color: $base-color;
+    }
 
     > .line1 {
         transform: rotate(45deg); 
