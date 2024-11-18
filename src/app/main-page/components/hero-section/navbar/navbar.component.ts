@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BurgerIconComponent } from "../../../../shared/components/burger-icon/burger-icon.component";
 import { MobileNavmenuComponent } from '../../../../shared/components/mobile-navmenu/mobile-navmenu.component';
@@ -11,9 +11,16 @@ import { MobileNavmenuComponent } from '../../../../shared/components/mobile-nav
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  constructor(private renderer: Renderer2) {};
   isMenuOpen = false;
 
   onMenuToggle(): void {
     this.isMenuOpen = !this.isMenuOpen;
+
+    if (this.isMenuOpen) {
+      this.renderer.addClass(document.body, 'no-scroll');
+    } else {
+      this.renderer.removeClass(document.body, 'no-scroll');
+    }
   }
 }

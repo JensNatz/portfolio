@@ -29,6 +29,10 @@ body {
     color: $color-black;
 }
 
+.no-scroll {
+    overflow: hidden !important;
+}
+
 h2 {
     font-family: 'Baloo';
     font-size: 96px;
@@ -44,6 +48,11 @@ h3 {
 p {
     font-size: 24px;
     line-height: 28px;
+
+    @media (max-width: $breakpoint-md) {
+        font-size: 20px;
+        line-height: 24px;
+    }
 }
 
 a {

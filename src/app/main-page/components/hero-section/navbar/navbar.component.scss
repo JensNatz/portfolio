@@ -33,6 +33,8 @@ nav {
             gap: 24px;
             list-style-type: none;
 
+          
+
             @media (max-width: $breakpoint-md) {
                 display: none;
             }
@@ -54,6 +56,14 @@ nav {
 
     >a {
         font-size: 24px;
+
+        &:hover {
+            color: $base-color;
+        }
+
+        @media (max-width: $breakpoint-lg) {
+            font-size: 20px;
+        }
     }
 }
 

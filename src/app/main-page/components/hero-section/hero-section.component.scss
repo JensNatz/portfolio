@@ -96,6 +96,18 @@ span {
     top: -400px;
     left: -400px;
 
+    @media (max-width: $breakpoint-xl) {
+        top: -500px;
+        left: -500px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        width: 50vw;
+        height: 50vw;
+        top: -25vh;
+        left: -25vw;
+    }
+
     @media (max-width: $breakpoint-md) {
         width: 200vw;
         height: 200vw;
