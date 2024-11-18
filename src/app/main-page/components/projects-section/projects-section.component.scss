@@ -9,6 +9,10 @@ section {
         div.headline-area {
             width: 50%;
 
+            @media (max-width: $breakpoint-lg) {
+                width: auto
+            }
+
             > h2 {
                 color: $base-color;
             }

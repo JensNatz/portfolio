@@ -1,0 +1,77 @@
+@import '../../variables';
+@import '../../mixins';
+
+form {
+    flex: 1;
+    @include flex($align: start, $direction: column);
+    gap: 32px;
+
+    >div.input-privacy {
+        
+        >input[type='checkbox'] {
+            display: none;
+        }
+
+        >label {
+            @include flex($justify: start);
+            gap: 8px;
+
+            >div {
+                width: 24px;
+                height: 24px;
+                min-width: 24px;
+                background: url('/assets/img/checkbox.svg');
+
+                &:hover {
+                    cursor: pointer;
+                    background: url('/assets/img/checkbox_hover.svg');
+                }
+            }
+        }
+
+        input[type="checkbox"]:checked + label > div {
+            background: url('/assets/img/checkbox_checked.svg');
+        }
+    }
+
+    >span.requiered {
+        font-size: 12px;
+    }
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+
+    >input {
+        height: 48px;
+    }
+
+    >textarea {
+        height: 124px;
+    }
+
+    >input,
+    textarea {
+        width: 100%;
+
+        &:focus+label,
+        &:not(:placeholder-shown)+label {
+            transform: translateY(-50%);
+            top: 0;
+            background: $color-white;
+            padding: 0 4px;
+            left: 20px;
+        }
+    }
+
+    >label {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        transform: translateY(-50%);
+        transition: all 0.25s ease;
+        pointer-events: none;
+        background: transparent;
+    }
+}

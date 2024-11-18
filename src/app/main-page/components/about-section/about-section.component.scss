@@ -10,13 +10,21 @@ section {
         max-width: 1440px;
         padding: 124px 32px;
 
+        @media (max-width: $breakpoint-sm) {
+            @include flex($direction: column);
+        }
+
         > div {
             @include flex($direction: column);
             flex: 1; 
         }
 
         > div.about-text {
-            @include flex($align: start, $direction: column);   
+            @include flex($align: start, $direction: column);  
+            
+            @media (max-width: $breakpoint-sm) {
+                @include flex($direction: column);
+            }
         }
     }
 }
@@ -46,13 +54,39 @@ p {
     font-size: 120px;
     line-height: 104px;
     margin-bottom: 32px;
+ 
+    @media (max-width: $breakpoint-xl) {
+        font-size: 96px;
+        line-height: 88px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        font-size: 72px;
+        line-height: 60px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        font-size: 60px;
+        line-height: 52px;
+        text-align: center;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 72px;
+        line-height: 60px;
+    }
+
 }
 
 .i-am {
     font-family: 'Baloo';
     color: $base-color;
-    font-size: 40px;
+    font-size: 42px;
     text-align: center;
     margin-bottom: 32px;
+
+    @media (max-width: $breakpoint-md) {
+        font-size: 36px;
+    }
 }
 
