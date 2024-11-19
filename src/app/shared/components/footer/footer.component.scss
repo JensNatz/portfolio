@@ -3,20 +3,27 @@
 
 
 footer {
-    padding: 124px 32px;
     @include flex();
-
 
     > div.content {
         @include flex($direction: column);
-        width: 100%;
-        max-width: 1440px;
+        @include content-width();
+        @include section-padding();
+
+        @media (max-width: $breakpoint-sm) {
+            gap: 24px;
+        }
 
 
         > div { 
             width: 100%;
             @include flex($justify: space-between);
             position: relative;
+
+            @media (max-width: $breakpoint-sm) {
+                @include flex($direction: column);
+                gap: 24px;
+            }
 
             >div.social-icons {
                 @include flex();
@@ -30,6 +37,12 @@ footer {
                 left: 50%;
                 transform: translateX(-50%);
                 color: $color-white;
+
+                @media (max-width: $breakpoint-sm) {
+                    left: auto;
+                    position: unset;
+                    transform: none;
+                }
               }
         }
     }

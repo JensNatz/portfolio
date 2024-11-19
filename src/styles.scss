@@ -63,6 +63,7 @@ h2 {
 h3 {
     font-family: 'Baloo';
     font-size: 48px;
+    line-height: 40px;
 }
 
 
@@ -154,18 +155,9 @@ button:disabled {
 section {
     @include flex();
 
-    >div.content {
-        width: 100%;
-        max-width: 1440px;
-        padding: 0 32px;
-
-        @media (max-width: $breakpoint-lg) {
-            padding: 0 24px;
-        }
-
-        @media (max-width: $breakpoint-sm) {
-            padding: 0 12px;
-        }
+    >div.content {     
+        @include content-width();
+        @include section-padding();
     }
 }
 

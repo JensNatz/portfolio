@@ -44,6 +44,10 @@ div.project {
             @media (max-width: $breakpoint-lg) {
                 @include flex($justify: left);
             }
+
+            @media (max-width: $breakpoint-sm) {
+                @include flex($direction: column);
+            }
         }
     }
 }

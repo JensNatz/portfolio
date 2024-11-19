@@ -16,8 +16,7 @@ nav {
 
     >div {
         @include flex($justify: space-between);
-        width: 100%;
-        max-width: 1440px;
+        @include content-width();
 
         img {
             width: 64px;

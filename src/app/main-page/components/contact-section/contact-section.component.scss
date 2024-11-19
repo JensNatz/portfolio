@@ -3,8 +3,6 @@
 
 section {
     div.content {
-        max-width: 1440px;
-        padding: 124px 32px;
 
         div.headline-area {
             width: 50%;
@@ -17,6 +15,10 @@ section {
         div.contactform-area {
             @include flex($justify: space-between, $align: start);
             gap: 32px;
+
+            @media (max-width: $breakpoint-sm) {
+                @include flex($direction: column);
+            }
 
             >div {
                 flex: 1;
