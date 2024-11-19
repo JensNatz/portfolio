@@ -1,15 +1,15 @@
-<form>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="input-container">
-        <input type="text" id="name" required placeholder="">
+        <input [(ngModel)]="formData.name" type="text" name="name" id="name" required placeholder="">
         <label for="name">Your name *</label>
     </div>
     <div class="input-container">
-        <input type="email" id="email" required placeholder="">
+        <input [(ngModel)]="formData.email" name="email" type="email" id="email" required placeholder="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
         <label for="email">Your email *</label>
     </div>
     <div class="input-container">
-        <textarea name="" id="" cols="8" required placeholder=""></textarea>
-        <label for="email">Your message *</label>
+        <textarea [(ngModel)]="formData.message" name="message" id="message" cols="8" required placeholder=""></textarea>
+        <label for="message">Your message *</label>
     </div>
     <div class="input-privacy">
         <input type="checkbox" name="privacy" id="privacy" required>
@@ -21,5 +21,5 @@
         </label>
     </div>
     <span class="requiered">* requiered</span>
-    <button disabled>Say hello ;)</button>
+    <button>Say hello ;)</button>
 </form>

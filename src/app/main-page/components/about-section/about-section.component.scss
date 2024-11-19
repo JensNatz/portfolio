@@ -31,9 +31,36 @@ div.about-icons {
     @include flex($justify: space-between);
     gap: 24px;
 
-    > div.icon {
+    @media (max-width: $breakpoint-lg) {
+        @include flex($direction: column);
+    }
+
+    > div.icon-container {
         @include flex();
         gap: 16px;
+
+        > div.icon {
+            width: 63px;
+            min-width: 63px;
+            height: 55px;
+            background-repeat: no-repeat;
+        }
+
+        >div.icon-location {
+            background-image: url('/assets/img/location.png');
+
+            &:hover {
+                background-image: url('/assets/img/location_hover.png');
+            }
+        }
+
+        >div.icon-remote {
+            background-image: url('/assets/img/remote.png');
+
+            &:hover {
+                background-image: url('/assets/img/remote_hover.png');
+            }
+        }
 
         > span {
             color: $base-color;
@@ -68,12 +95,6 @@ p {
         line-height: 52px;
         text-align: center;
     }
-
-    @media (max-width: $breakpoint-sm) {
-        font-size: 72px;
-        line-height: 60px;
-    }
-
 }
 
 .i-am {

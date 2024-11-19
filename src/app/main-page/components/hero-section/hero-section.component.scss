@@ -10,6 +10,7 @@ section {
 
     @media (max-width: $breakpoint-md) {
         height: auto;
+        
     }
 
     >div.content {
@@ -19,15 +20,13 @@ section {
         @media (max-width: $breakpoint-md) {
             @include flex($direction:column-reverse, $justify: space-between);
             margin-top: 104px;
-            background-color: aquamarine;
-            height: auto;
+            padding-bottom: 0 !important;
         }
 
         > div {
             @include flex($direction: column);
             flex: 1;
             height: 100vh;
-            background-color: rebeccapurple;
 
             @media (max-width: $breakpoint-md) {
                 height: auto;
@@ -78,21 +77,21 @@ span {
     font-size: 48px;
     text-align: center;
 
-    @media (max-width: $breakpoint-sm) {
-        font-size: 42px;
-    }
-
-    @media (max-width: $breakpoint-md) {
-        font-size: 20px;
-        color: $color-white;
+    @media (max-width: $breakpoint-xl) {
+        font-size: 36px;
     }
 
     @media (max-width: $breakpoint-lg) {
         font-size: 24px;
     }
 
-    @media (max-width: $breakpoint-xl) {
+    @media (max-width: $breakpoint-md) {
         font-size: 36px;
+        color: $color-white;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 24px;
     }
 }
 
@@ -120,6 +119,13 @@ span {
         top: -90vw;
         left: -90vw;
     }
+
+    @media (max-width: $breakpoint-sm) {
+        width: 225vw;
+        height: 225vw;
+        top: -80vw;
+        left: -90vw;
+    }
 }
 
 .social-icons {
@@ -129,4 +135,8 @@ span {
     right: 32px;
     bottom: 24px;
     z-index: 1;
+
+    @media (max-width: $breakpoint-lg) {
+        right: 24px;
+      }
 }
