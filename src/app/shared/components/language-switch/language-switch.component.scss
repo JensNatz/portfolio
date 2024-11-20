@@ -1,0 +1,27 @@
+@import '../../variables';
+@import '../../mixins';
+
+:host{
+   @include flex();
+}
+
+span {
+    cursor: pointer;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 28px;
+    height: 32px;
+    text-align: center;  
+    line-height: 32px;
+    transition: transform 0.125s ease;
+
+    &:hover {
+        transform: scale(1.075);
+        transform-origin: center;
+    }
+}
+
+.active {
+    font-weight: 700;
+}

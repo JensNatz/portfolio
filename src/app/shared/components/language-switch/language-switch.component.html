@@ -1,0 +1,3 @@
+@for (language of languages; track language) {
+    <span [ngClass]="{'active': language === currentLanguage}" (click)="switchLanguage(language)">{{ language }}</span>
+}

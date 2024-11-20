@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../../../../models/project';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })

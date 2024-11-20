@@ -1,3 +1,25 @@
 {
-	"hero.greeting": "Hello! I am Jens"
+	"about.description": "I’m a Frontend Developer based in Borken, NRW, Germany. I enjoy helping designers and companies bring their ideas to life. I’d be happy to support your team with my ability to solve complex problems, combined with my passion for programming.",
+	"about.description2": "If you think I'd be a good fit for your projects, please feel free to contact me!",
+	"about.location": "located in Borken, NRW",
+	"about.remote": "open to remote work",
+	"about.title": "About me",
+	"contact.description": "Contact me through this form. I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+	"contact.problem": "Got a problem to solve?",
+	"contact.title": "Contact",
+	"credentials.subtitle": "Here's what others say about me",
+	"credentials.title": "Need a team player?",
+	"form.buttontext": "Say hello :)",
+	"form.email": "Your Email",
+	"form.message": "Your message",
+	"form.name": "Your Name",
+	"form.privacy": "I've read the <a href=\"#\">privacy policy</a> and agree to the processing of my data as outlined.",
+	"form.required": "required",
+	"general.imprint": "Imprint & Privacy Policy",
+	"general.sendMessage": "Send a message",
+	"hero.greeting": "Hello! I am Jens",
+	"projects.demo": "See demo",
+	"projects.description": "Explore a selection of my work here - Interact with the projects to see my skills in action.",
+	"projects.github": "Code on GitHub",
+	"projects.title": "My work"
 }
