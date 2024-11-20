@@ -2,17 +2,19 @@ import { Component, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BurgerIconComponent } from "../../../../shared/components/burger-icon/burger-icon.component";
 import { MobileNavmenuComponent } from '../../../../shared/components/mobile-navmenu/mobile-navmenu.component';
+import { LanguageSwitchComponent } from '../../../../shared/components/language-switch/language-switch.component';
+
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, BurgerIconComponent, MobileNavmenuComponent],
+  imports: [CommonModule, BurgerIconComponent, MobileNavmenuComponent, LanguageSwitchComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(private renderer: Renderer2) {};
   isMenuOpen = false;
+  constructor(private renderer: Renderer2) {};
 
   onMenuToggle(): void {
     this.isMenuOpen = !this.isMenuOpen;

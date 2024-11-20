@@ -1,30 +1,27 @@
 <section>
     <div class="content">
         <div>
-            <span class="claim">Let's work
-                <br />
-                together</span>
-            <span class="i-am">I am</span>
+            <span class="claim">{{ 'about.title' | translate }}</span>
             <div class="about-icons">
                 <div class="icon-container">
                     <div class="icon icon-location"></div>
-                    <span>located in Borken, NRW</span>
+                    <span>{{ 'about.location' | translate }}</span>
                 </div>
                 <div class="icon-container">
                     <div class="icon icon-remote"></div>
-                    <span>open to remote work</span>
+                    <span>{{ 'about.remote' | translate }}</span>
                 </div>
             </div>
         </div>
         <div class="about-text">
             <p>
-                I am a Frontend Developer based in Borken, NRW, Germany. I enjoy helping designers and companies bring their ideas to life. My ability to solve complex problems, combined with my passion for programming, makes me a valuable addition to your team.
+                {{ 'about.description' | translate }}
             </p>
             <p>
-                If you think I'd be a good fit for your projects, please feel free to contact me!
+                {{ 'about.description2' | translate }}
             </p>
             <a href="contact" target="_blank" class="button">
-                Send a message
+                {{ 'general.sendMessage' | translate }}
             </a>
         </div>
     </div>

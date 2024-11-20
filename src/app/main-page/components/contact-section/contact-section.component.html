@@ -1,18 +1,21 @@
 <section>
     <div class="content">
         <div class="headline-area">
-            <h2>Contact</h2>
+            <h2>{{ 'contact.title' | translate }}</h2>
         </div>
         <div class="contactform-area">
             <div>
-                <span class="claim">Got a problem to solve?</span>
+                <span class="claim">{{ 'contact.problem' | translate }}</span>
                 <p>
-                    Contact me through this form. I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.
+                    {{ 'contact.description' | translate }}
                 </p>
             </div>
             <div>
                 <app-contact-form></app-contact-form>
             </div>
         </div>
+        <a class="up-button" href="#top">
+            <img src="assets/img/up-button.svg" alt="">
+        </a>
     </div>
 </section>

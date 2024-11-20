@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { SocialIconComponent } from '../social-icon/social-icon.component';
 import { SocialIcon } from '../../../models/social-icon';
-
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [SocialIconComponent],
+  imports: [SocialIconComponent, TranslatePipe],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

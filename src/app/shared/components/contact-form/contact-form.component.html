@@ -1,25 +1,23 @@
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="input-container">
         <input [(ngModel)]="formData.name" type="text" name="name" id="name" required placeholder="">
-        <label for="name">Your name *</label>
+        <label for="name"> {{ 'form.name' | translate }} *</label>
     </div>
     <div class="input-container">
         <input [(ngModel)]="formData.email" name="email" type="email" id="email" required placeholder="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-        <label for="email">Your email *</label>
+        <label for="email">{{ 'form.email' | translate }} *</label>
     </div>
     <div class="input-container">
         <textarea [(ngModel)]="formData.message" name="message" id="message" cols="8" required placeholder=""></textarea>
-        <label for="message">Your message *</label>
+        <label for="message">{{ 'form.message' | translate }} *</label>
     </div>
     <div class="input-privacy">
-        <input type="checkbox" name="privacy" id="privacy" required>
+        <input ngModel type="checkbox" name="privacy" id="privacy" required>
         <label for="privacy">
             <div></div>
-            <span>
-                I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined. *
-            </span>
+            <span [innerHTML]="'form.privacy' | translate"></span>
         </label>
     </div>
-    <span class="requiered">* requiered</span>
-    <button>Say hello ;)</button>
+    <span class="requiered">* {{ 'form.required' | translate }}</span>
+    <button [disabled]="contactForm.invalid">{{ 'form.buttontext' | translate }}</button>
 </form>

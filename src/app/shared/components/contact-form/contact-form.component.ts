@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import {TranslatePipe} from "@ngx-translate/core";
+
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, TranslatePipe],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
@@ -13,8 +15,7 @@ export class ContactFormComponent {
 formData = {
   name: '',
   email: '',
-  message: ''
-}
+  message: ''}
 
 http = inject(HttpClient)
 mailTest = true;
@@ -35,7 +36,6 @@ onSubmit(ngForm: NgForm) {
     this.http.post(this.post.endPoint, this.post.body(this.formData))
       .subscribe({
         next: (response) => {
-
           ngForm.resetForm();
         },
         error: (error) => {

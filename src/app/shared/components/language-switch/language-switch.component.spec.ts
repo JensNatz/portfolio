@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NavbarComponent } from './navbar.component';
 
-describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+import { LanguageSwitchComponent } from './language-switch.component';
+
+describe('LanguageSwitchComponent', () => {
+  let component: LanguageSwitchComponent;
+  let fixture: ComponentFixture<LanguageSwitchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavbarComponent]
+      imports: [LanguageSwitchComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(LanguageSwitchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

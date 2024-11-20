@@ -18,14 +18,21 @@ nav {
         @include flex($justify: space-between);
         @include content-width();
 
-        img {
-            width: 64px;
-            height: auto;
+        div.logo-area {
+            @include flex();
+            gap: 24px;
 
-            @media (max-width: $breakpoint-md) {
-                width: 48px;
+            img {
+                width: 64px;
+                height: auto;
+    
+                @media (max-width: $breakpoint-md) {
+                    width: 48px;
+                }
             }
         }
+
+        
 
         >ul {
             @include flex();
