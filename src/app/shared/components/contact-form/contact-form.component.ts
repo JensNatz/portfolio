@@ -15,8 +15,7 @@ export class ContactFormComponent {
 formData = {
   name: '',
   email: '',
-  message: ''
-}
+  message: ''}
 
 http = inject(HttpClient)
 mailTest = true;
@@ -37,7 +36,6 @@ onSubmit(ngForm: NgForm) {
     this.http.post(this.post.endPoint, this.post.body(this.formData))
       .subscribe({
         next: (response) => {
-
           ngForm.resetForm();
         },
         error: (error) => {
