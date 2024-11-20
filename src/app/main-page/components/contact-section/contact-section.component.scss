@@ -3,6 +3,8 @@
 
 section {
     div.content {
+        @include flex($align: start, $direction: column);
+        gap: 24px;
 
         div.headline-area {
             width: 50%;
@@ -31,6 +33,14 @@ section {
                     font-weight: 700;
                 }
             }
+        }
+    }
+}
+
+a.up-button {
+    &:hover {
+        > img {
+            transform: scale(1.1) translateY(-4px)
         }
     }
 }
