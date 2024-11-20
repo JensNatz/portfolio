@@ -1,7 +1,9 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BurgerIconComponent } from "../../../../shared/components/burger-icon/burger-icon.component";
 import { MobileNavmenuComponent } from '../../../../shared/components/mobile-navmenu/mobile-navmenu.component';
+
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -11,8 +13,11 @@ import { MobileNavmenuComponent } from '../../../../shared/components/mobile-nav
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(private renderer: Renderer2) {};
+
+  private translateService = inject(TranslateService);
   isMenuOpen = false;
+
+  constructor(private renderer: Renderer2) {};
 
   onMenuToggle(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -22,5 +27,9 @@ export class NavbarComponent {
     } else {
       this.renderer.removeClass(document.body, 'no-scroll');
     }
+  }
+
+  switchLanguage(language: string) {
+    this.translateService.use(language);
   }
 }

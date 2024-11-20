@@ -1,6 +1,8 @@
 <nav>
     <div>
         <img [src]="isMenuOpen ? 'assets/img/logo_blue.svg' : 'assets/img/logo.svg'" alt="Logo" />
+        <span (click)="switchLanguage('de')">DE</span>
+        <span (click)="switchLanguage('en')">EN</span>
         <ul>
             <li class="nav-link"><a href="#">About me</a></li>
             <li class="nav-link"><a href="#">Skillset</a></li>

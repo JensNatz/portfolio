@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SocialIcon } from '../../../models/social-icon';
 import { SocialIconComponent } from '../../../shared/components/social-icon/social-icon.component';
+import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [NavbarComponent, SocialIconComponent],
+  imports: [NavbarComponent, SocialIconComponent, TranslatePipe, TranslateDirective],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
@@ -27,6 +28,6 @@ export class HeroSectionComponent {
       img: 'linkedin_blue.svg',
       alt: 'LinkedIn'
     }
-  ]
+  ];
 
 }
