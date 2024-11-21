@@ -5,6 +5,7 @@ section {
     div.content {
         @include flex($align: start, $direction: column);
         gap: 24px;
+        position: relative;
 
         div.headline-area {
             width: 50%;
@@ -45,5 +46,31 @@ a.up-button {
         > img {
             transform: scale(1.1) translateY(-4px)
         }
+    }
+}
+
+.bubble {
+    z-index: 0;
+}
+
+#bubble1 {
+    width: 240px;
+    height: 240px;
+    top: 80px;
+    left: 70%;
+
+    @media (max-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+#bubble2 {
+    width: 180px;
+    height: 180px;
+    bottom: 40px;
+    left: 20%;
+
+    @media (max-width: $breakpoint-md) {
+        left: 80%;
     }
 }

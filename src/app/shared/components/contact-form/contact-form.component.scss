@@ -54,6 +54,7 @@ form {
     >input,
     textarea {
         width: 100%;
+        background-color: $color-white;
 
         &:focus+label,
         &:not(:placeholder-shown)+label {
@@ -74,4 +75,28 @@ form {
         pointer-events: none;
         background: transparent;
     }
+}
+
+div.toastmessage {
+    @include flex($align: center);
+    position: fixed;
+    right: 5%;
+    bottom: 50%;
+    z-index: 999;
+    height: 64px;
+    padding: 0 24px;
+    border-radius: 10px;
+    background-color: $base-color-dark;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0;  // Initial unsichtbar
+    transform: translateX(100%);  // Start außerhalb des Bildschirms
+    transition: opacity 0.125s ease-in-out, transform 0.125s ease-out;  // Übergangseffekte
+}
+
+// Klasse, die die Toast-Nachricht von rechts einfliegen lässt
+div.toastmessage.toastmessage-slide-in {
+    opacity: 1;  // Toast sichtbar machen
+    transform: translateX(0);  // Endposition auf dem Bildschirm
 }

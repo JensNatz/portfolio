@@ -155,6 +155,7 @@ button:disabled {
 
 section {
     @include flex();
+    overflow: hidden;
 
     >div.content {     
         @include content-width();

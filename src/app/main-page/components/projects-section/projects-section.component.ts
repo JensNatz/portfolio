@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../models/project';
 import { ProjectComponent } from './project/project.component';
-import {TranslatePipe} from "@ngx-translate/core";
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-projects-section',
@@ -12,6 +12,7 @@ import {TranslatePipe} from "@ngx-translate/core";
   styleUrl: './projects-section.component.scss'
 })
 export class ProjectsSectionComponent {
+
   projects: Project[] = [
     {
       title: 'Join',

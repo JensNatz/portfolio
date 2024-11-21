@@ -21,3 +21,4 @@
     <span class="requiered">* {{ 'form.required' | translate }}</span>
     <button [disabled]="contactForm.invalid">{{ 'form.buttontext' | translate }}</button>
 </form>
+<div class="toastmessage" [ngClass]="{'toastmessage-slide-in': toastMessageShown}">Form send successfully!</div>
