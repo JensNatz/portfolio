@@ -5,10 +5,10 @@
             <app-language-switch></app-language-switch>
         </div>
         <ul>
-            <li class="nav-link"><a href="#">About me</a></li>
-            <li class="nav-link"><a href="#">Skillset</a></li>
-            <li class="nav-link"><a href="#">My work</a></li>
-            <li class="nav-link"><a href="#">Contact</a></li>
+            <li class="nav-link"><a href="#about">{{ 'about.title' | translate }}</a></li>
+            <li class="nav-link"><a href="#skillset">Skillset</a></li>
+            <li class="nav-link"><a href="#projects">{{ 'projects.title' | translate }}</a></li>
+            <li class="nav-link"><a href="#contact">{{ 'contact.title' | translate }}</a></li>
         </ul>
         <div class="menu-icon">
             <app-burger-icon  (menuClicked)="onMenuToggle()"></app-burger-icon>
