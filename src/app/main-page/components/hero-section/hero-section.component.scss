@@ -72,7 +72,7 @@ h1 {
     }
 }
 
-span {
+span.greeting {
     color: $base-color;
     font-size: 48px;
     text-align: center;
@@ -123,7 +123,7 @@ span {
     @media (max-width: $breakpoint-sm) {
         width: 225vw;
         height: 225vw;
-        top: -80vw;
+        top: -110vw;
         left: -90vw;
     }
 }
@@ -138,7 +138,11 @@ span {
 
     @media (max-width: $breakpoint-lg) {
         right: 24px;
-      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+       display: none;
+    }
 }
 
 .scroll {
@@ -149,9 +153,14 @@ span {
     left: 60%;
     z-index: 1;
 
+    @media (max-width: $breakpoint-md) {
+        display: none;
+    }
+
     > span {
         text-transform: uppercase;
         font-size: 20px;
+        color: $base-color;
     }
 
     > div {
@@ -159,4 +168,34 @@ span {
         height: 100px;
         background-color: $base-color;
     }
+}
+
+.scroll-mobile {
+    display: none;
+    gap: 8px;
+    position: absolute;
+    top: 0;
+    right: 24px;
+    z-index: 1; 
+    transform-origin: bottom;
+    transform: translateY(calc(100vh - 100% - 24px));
+
+    @media (max-width: $breakpoint-md) {
+        @include flex($direction: column);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        right: 16px;
+        transform: translateY(calc(100vh - 100% - 120px));
+    }
+
+    > span {
+        color: $base-color;
+        writing-mode: vertical-lr;
+        font-size: 20px;
+    }
+
+    
+
+    
 }
