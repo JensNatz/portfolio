@@ -13,7 +13,7 @@
 	"form.email": "Your Email",
 	"form.message": "Your message",
 	"form.name": "Your Name",
-	"form.privacy": "I've read the <a href=\"#\">privacy policy</a> and agree to the processing of my data as outlined.",
+	"form.privacy": "I've read the <a href=\"imprint\">privacy policy</a> and agree to the processing of my data as outlined.",
 	"form.required": "required",
 	"general.imprint": "Imprint & Privacy Policy",
 	"general.sendMessage": "Send a message",

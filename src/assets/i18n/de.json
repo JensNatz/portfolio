@@ -13,7 +13,7 @@
 	"form.email": "Emailadresse",
 	"form.message": "Nachricht",
 	"form.name": "Name",
-	"form.privacy": "Ich habe die <a href=\"#\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+	"form.privacy": "Ich habe die <a href=\"imprint\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
 	"form.required": "Pflichtfeld",
 	"general.imprint": "Impressum & Datenschutzerklärung",
 	"general.sendMessage": "Nachricht senden",
