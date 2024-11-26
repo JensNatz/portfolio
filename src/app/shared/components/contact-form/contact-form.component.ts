@@ -2,12 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import {TranslatePipe} from "@ngx-translate/core";
+import { CommonModule } from '@angular/common';
+
 
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, TranslatePipe],
+  imports: [FormsModule, TranslatePipe, CommonModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
@@ -18,10 +20,11 @@ formData = {
   message: ''}
 
 http = inject(HttpClient)
-mailTest = true;
+mailTest = false;
+toastMessageShown = false;
 
 post = {
-  endPoint: 'https://deineDomain.de/sendMail.php',
+  endPoint: 'https://jens-natzschka.com/sendMail.php',
   body: (payload: any) => JSON.stringify(payload),
   options: {
     headers: {
@@ -39,9 +42,14 @@ onSubmit(ngForm: NgForm) {
           ngForm.resetForm();
         },
         error: (error) => {
-          console.error(error);
+          //console.error(error);
         },
-        complete: () => console.info('send post complete'),
+        complete: () => {
+          this.toastMessageShown = true;
+          setTimeout(()=>{
+            this.toastMessageShown = false;
+          }, 2000);
+        },
       });
   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 

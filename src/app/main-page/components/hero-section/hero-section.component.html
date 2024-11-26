@@ -6,7 +6,7 @@
             <img src="assets/img/portrait.png" alt="It's me!"> 
         </div>
         <div>
-            <span>{{ 'hero.greeting' | translate }}</span>
+            <span class="greeting">{{ 'hero.greeting' | translate }}</span>
             <h1>
                 Fontend
                 <br />
@@ -18,5 +18,13 @@
         @for (item of socialIcons; track item) {
             <app-social-icon [icon]="item"></app-social-icon>
         }
+    </div>
+    <div class="scroll">
+        <span>Scroll</span>
+        <div></div>
+    </div>
+    <div class="scroll-mobile">
+        <span>Scroll down</span>
+        <img src="assets/img/arrow-down.svg">
     </div>
 </section>

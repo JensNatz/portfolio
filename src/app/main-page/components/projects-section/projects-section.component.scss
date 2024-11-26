@@ -2,7 +2,9 @@
 @import '../../../shared/mixins';
 
 section {
+   
     div.content {
+        position: relative;
         div.headline-area {
             width: 50%;
 
@@ -21,4 +23,38 @@ div.project-list {
     @include flex($direction: column);
     gap: 64px;
     margin-top: 40px;
+}
+
+.bubble {
+    z-index: -1;
+}
+
+#bubble1 {
+    width: 240px;
+    height: 240px;
+    top: 100px;
+    left: 70%;
+}
+
+#bubble2 {
+    width: 80px;
+    height: 80px;
+    top: 800px;
+    left: 10%;
+
+    @media (max-width: $breakpoint-xl) {
+        top: 600px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        left: -30px;
+        top: 800px;
+    }
+}
+
+#bubble3 {
+    width: 380px;
+    height: 380px;
+    top: 1200px;
+    left: 90%;
 }

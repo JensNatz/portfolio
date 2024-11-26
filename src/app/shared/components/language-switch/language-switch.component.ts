@@ -15,7 +15,8 @@ export class LanguageSwitchComponent {
   currentLanguage = this.translateService.currentLang;
 
   constructor(){
-    this.languages = this.translateService.getLangs();    
+    this.languages = this.translateService.getLangs();   
+    this.languages.reverse(); 
   }
 
   switchLanguage(language: string) {

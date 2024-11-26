@@ -7,6 +7,7 @@ section {
     >div.content {
         @include flex($align: start);
         gap: 32px;
+        position: relative;
 
         @media (max-width: $breakpoint-sm) {
             @include flex($direction: column);
@@ -109,3 +110,22 @@ p {
     }
 }
 
+.bubble {
+    z-index: -1;
+}
+
+#bubble1 {
+    width: 140px;
+    height: 140px;
+    top: -70px;
+    left: 60%;
+
+    @media (max-width: $breakpoint-md) {
+        top: 80%;
+        left: 20%;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        display: none;
+    }
+}
