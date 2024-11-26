@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Skill } from '../../../models/skill';
+import { GrowthIconComponent } from './growth-icon/growth-icon.component';
 
 @Component({
   selector: 'app-skills-section',
   standalone: true,
-  imports: [],
+  imports: [GrowthIconComponent],
   templateUrl: './skills-section.component.html',
   styleUrl: './skills-section.component.scss'
 })

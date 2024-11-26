@@ -20,8 +20,8 @@ export class ProjectsSectionComponent {
       technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
       description_en: 'A task management tool inspired by the Kanban system. Ideal for creating and organizing tasks, assigning contacts, categories, and more.',
       description_de: 'Ein Task-Management-Tool inspiriert vom Kanban-System. Geeignet zum Erstellen und organisieren von Aufgaben, zuweisen von Kontakten, Kategorien, uvm.',
-      demoLink: 'https://join.com',
-      githubLink: 'https://github.com'
+      demoLink: 'https://join.jens-natzschka.com',
+      githubLink: 'https://github.com/JensNatz/join-kanban'
     },
     {
       title: 'The Mad Scientist',
@@ -29,8 +29,8 @@ export class ProjectsSectionComponent {
       technologies: 'JavaScript | HTML | CSS',
       description_en: 'A 2D side-scroller game showcasing Object-Oriented Programming in JavaScript. Help the Mad Scientist defend his space lab against the invaders.',
       description_de: 'Ein 2D-Side-Scroller-Game auf Basis objektorientierter Programmierung in JavaScript. Hilf dem verrückten Professor, sein Weltraumlabor gegen die Eindringlinge zu verteidigen.',
-      demoLink: 'https://join.com',
-      githubLink: 'https://github.com'
+      demoLink: 'https://madscientist.jens-natzschka.com',
+      githubLink: 'https://github.com/JensNatz/mad-scientist'
     },
   ];
 }
