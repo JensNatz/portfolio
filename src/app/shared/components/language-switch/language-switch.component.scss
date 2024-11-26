@@ -5,6 +5,12 @@
    @include flex();
 }
 
+:host.maincolor {
+    > span {
+        color: $base-color !important;
+    }
+}
+
 span {
     cursor: pointer;
     color: $color-white;
@@ -25,3 +31,4 @@ span {
 .active {
     font-weight: 700;
 }
+

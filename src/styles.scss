@@ -33,6 +33,10 @@ body {
     overflow: hidden !important;
 }
 
+h1 {
+    font-family: 'Baloo';
+}
+
 h2 {
     font-family: 'Baloo';
     font-size: 96px;
@@ -114,6 +118,7 @@ a {
     position: relative;
     overflow: hidden;
     transition: color 0.25s ease;
+    z-index: 100;
 
     &:visited {
         text-decoration: none;
@@ -122,6 +127,7 @@ a {
 
     &:hover {
         color: $color-white;
+        font-weight: 400;
     }
 
     &::before {

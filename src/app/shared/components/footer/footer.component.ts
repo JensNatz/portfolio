@@ -16,12 +16,12 @@ export class FooterComponent {
 
   socialIcons:SocialIcon[] = [
     {
-      link: 'mailto:jens.natzschka@posteo.de',
+      link: 'mailto:mail@jens-natzschka.com',
       img: 'email.svg',
       alt: 'Email'
     },
     {
-      link: 'https://github.com',
+      link: 'https://github.com/JensNatz',
       img: 'github.svg',
       alt: 'GitHub'
     },{

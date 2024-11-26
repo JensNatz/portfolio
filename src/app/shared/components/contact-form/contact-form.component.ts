@@ -20,11 +20,11 @@ formData = {
   message: ''}
 
 http = inject(HttpClient)
-mailTest = true;
+mailTest = false;
 toastMessageShown = false;
 
 post = {
-  endPoint: 'https://deineDomain.de/sendMail.php',
+  endPoint: 'https://jens-natzschka.com/sendMail.php',
   body: (payload: any) => JSON.stringify(payload),
   options: {
     headers: {
@@ -40,15 +40,16 @@ onSubmit(ngForm: NgForm) {
       .subscribe({
         next: (response) => {
           ngForm.resetForm();
+        },
+        error: (error) => {
+          //console.error(error);
+        },
+        complete: () => {
           this.toastMessageShown = true;
           setTimeout(()=>{
             this.toastMessageShown = false;
-          }, 1000);
+          }, 2000);
         },
-        error: (error) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
       });
   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
