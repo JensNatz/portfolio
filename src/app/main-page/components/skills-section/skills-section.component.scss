@@ -16,7 +16,7 @@ section {
         @include flex($align: start);
         flex-wrap: wrap;
         max-width: 900px;
-        gap: 72px;
+        gap: 60px;
         
         > div.skill {
             @include flex($direction: column);
@@ -30,6 +30,7 @@ section {
 
             > span {
                 color: $color-white;
+                text-align: center;
             }
 
             &:hover {

@@ -7,7 +7,7 @@
             @for (item of skills; track item) {
                 <div class="skill">
                     <img [src]="'assets/img/' + item.img" alt="{{ item.title }}">
-                    <span>{{ item.title }}</span>
+                    <span [innerHTML]="item.title"></span>
                 </div>
             }
             <app-growth-icon></app-growth-icon>
