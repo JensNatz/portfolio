@@ -54,7 +54,7 @@ export class SkillsSectionComponent {
       img: 'scrum.svg'
     },
     {
-      title: 'Getting Things<br/> Done®',
+      title: 'Getting Things<br/>Done®',
       img: 'gtd.svg'
     }
   ];

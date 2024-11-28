@@ -4,8 +4,14 @@
         <label for="name"> {{ 'form.name' | translate }} *</label>
     </div>
     <div class="input-container">
-        <input [(ngModel)]="formData.email" name="email" type="email" id="email" required placeholder="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        <input [(ngModel)]="formData.email" [ngClass]="{'invalid': email.invalid && email.touched}" name="email" type="email" id="email" required #email="ngModel" placeholder="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
         <label for="email">{{ 'form.email' | translate }} *</label>
+        <!-- <div *ngIf="email.invalid && email.touched">
+            Bitte geben Sie eine gültige E-Mail-Adresse ein.
+          </div>
+          <div *ngIf="email.valid && email.touched">
+            das ist eine korrekte Emailadresse
+          </div> -->
     </div>
     <div class="input-container">
         <textarea [(ngModel)]="formData.message" name="message" id="message" cols="8" required placeholder=""></textarea>

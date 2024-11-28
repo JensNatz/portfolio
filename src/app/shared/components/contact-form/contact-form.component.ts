@@ -38,7 +38,7 @@ onSubmit(ngForm: NgForm) {
   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
     this.http.post(this.post.endPoint, this.post.body(this.formData))
       .subscribe({
-        next: (response) => {
+        next: () => {
           ngForm.resetForm();
         },
         error: (error) => {
@@ -52,7 +52,6 @@ onSubmit(ngForm: NgForm) {
         },
       });
   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
     ngForm.resetForm();
   }
 }

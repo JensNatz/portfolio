@@ -7,7 +7,7 @@ form {
     gap: 32px;
 
     >div.input-privacy {
-        
+
         >input[type='checkbox'] {
             display: none;
         }
@@ -29,7 +29,7 @@ form {
             }
         }
 
-        input[type="checkbox"]:checked + label > div {
+        input[type="checkbox"]:checked+label>div {
             background: url('/assets/img/checkbox_checked.svg');
         }
     }
@@ -45,6 +45,20 @@ form {
 
     >input {
         height: 48px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 26px;
+            height: 26px;
+            background-image: url('/assets/img/invalid.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 
     >textarea {
@@ -77,6 +91,12 @@ form {
     }
 }
 
+.invalid {
+    border: 1px solid red;
+    padding-right: 30px;
+    position: relative;
+}
+
 div.toastmessage {
     @include flex($align: center);
     gap: 8px;
@@ -96,6 +116,6 @@ div.toastmessage {
 }
 
 div.toastmessage.toastmessage-slide-in {
-    opacity: 1; 
+    opacity: 1;
     transform: translateX(-24px);
 }
