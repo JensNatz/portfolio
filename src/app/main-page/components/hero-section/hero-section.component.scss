@@ -7,11 +7,7 @@ section {
     width: 100%;
     position: relative;
     overflow: hidden;
-
-    @media (max-width: $breakpoint-md) {
-        height: auto;
-        
-    }
+    
 
     >div.content {
         @include flex;
@@ -19,8 +15,11 @@ section {
 
         @media (max-width: $breakpoint-md) {
             @include flex($direction:column-reverse, $justify: space-between);
-            margin-top: 104px;
-            padding-bottom: 0 !important;
+            align-items: unset;
+            padding-bottom: 0;
+            padding-top: 0;
+            margin-top: auto;
+            height: calc(100vh - 104px);
         }
 
         > div {
@@ -30,15 +29,33 @@ section {
 
             @media (max-width: $breakpoint-md) {
                 height: auto;
+                overflow: hidden;
             }
 
             >img {
-                height: auto;
+                max-height: calc(100vh - 114px);
                 width: 100%;
                 margin-top: auto;
+                object-fit: contain;
+
+                @media (max-width: $breakpoint-md) {
+                    height: auto;
+                    max-width: 100%;
+                    max-height: 100%;
+                    
+                }
             }
         }
     }
+}
+
+div.greeting-container {
+    @media (max-width: $breakpoint-md) {
+        flex-shrink: 1;
+        max-height: 30%;
+
+    }
+
 }
 
 h1 {
@@ -122,7 +139,7 @@ span.greeting {
     @media (max-width: $breakpoint-sm) {
         width: 225vw;
         height: 225vw;
-        top: -110vw;
+        top: -100vw;
         left: -90vw;
     }
 }
@@ -176,7 +193,6 @@ span.greeting {
     top: 0;
     right: 24px;
     z-index: 1; 
-    transform-origin: bottom;
     transform: translateY(calc(100vh - 100% - 24px));
 
     @media (max-width: $breakpoint-md) {

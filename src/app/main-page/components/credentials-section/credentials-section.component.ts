@@ -32,7 +32,7 @@ export class CredentialsSectionComponent {
       text_de: 'Jens setzt komplexe Anforderungen in benutzerfreundliche Front-End-Lösungen um und kommuniziert klar im Team. Ich empfehle ihn gerne für jedes Projekt.'
     },
     {
-      name: 'Noha Reintz',
+      name: 'Noah Reinartz',
       projectName: 'DA Bubble',
       text_en: 'Jens is a dedicated developer who delivers high-quality results under pressure. He is a valuable asset to any team.',
       text_de: 'Jens ist ein engagierter Entwickler, der auch unter Druck qualitativ hochwertige Ergebnisse liefert. Er ist eine wertvolle Bereicherung für jedes Team.'

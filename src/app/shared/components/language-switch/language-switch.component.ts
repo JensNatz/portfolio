@@ -21,6 +21,7 @@ export class LanguageSwitchComponent {
 
   switchLanguage(language: string) {
     this.translateService.use(language);
+    localStorage.setItem('language', language);
     this.currentLanguage = language;    
   }
 }
