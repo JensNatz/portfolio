@@ -21,7 +21,7 @@
     <span class="requiered">* {{ 'form.required' | translate }}</span>
     <button [disabled]="contactForm.invalid">{{ 'form.buttontext' | translate }}</button>
 </form>
-<div class="toastmessage" [ngClass]="{'toastmessage-slide-in': toastMessageShown}">
+<div class="toastmessage background-dark" [ngClass]="{'toastmessage-slide-in': toastMessageShown}">
     <img src="assets/img/done.svg">
     {{ 'form.toastmessage' | translate }}
 </div>

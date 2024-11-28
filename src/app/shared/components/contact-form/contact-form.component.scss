@@ -82,20 +82,20 @@ div.toastmessage {
     gap: 8px;
     position: fixed;
     bottom: 50%;
+    right: 0;
     z-index: 999;
     height: 64px;
     padding: 0 24px;
     border-radius: 10px;
-    background-color: $base-color-dark;
     color: $color-white;
     font-size: 16px;
     font-weight: 700;
     opacity: 1;
-    transform: translateX(200%);
+    transform: translateX(100%);
     transition: opacity 0.25s ease-in-out, transform 0.25s ease-out;
 }
 
 div.toastmessage.toastmessage-slide-in {
     opacity: 1; 
-    transform: translateX(0);
+    transform: translateX(-24px);
 }
