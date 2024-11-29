@@ -16,24 +16,42 @@ section {
         @include flex($align: start);
         flex-wrap: wrap;
         max-width: 900px;
-        gap: 60px;
+        gap: 32px;
+
+        @media (max-width: $breakpoint-md) {
+            gap: 16px;
+        }
         
         > div.skill {
             @include flex($direction: column);
-            gap: 16px;
+            gap: 8px;
+            margin-bottom: 16px;
 
             > img {
                 height: 75px;
                 width: auto;
                 transition: all 0.125s ease;
+                transform-origin: center;
+                margin: 8px 26px;
+
+                @media (max-width: $breakpoint-md) {
+                    height: 60px;
+                }
             }
 
             > span {
                 color: $color-white;
                 text-align: center;
+                transition: all 0.125s ease;
+                font-weight: 400;
+
+                @media (max-width: $breakpoint-md) {
+                    font-size: 14px;
+                }
             }
 
             &:hover {
+                
                 > img {
                     transform: translateY(-4px) scale(1.05);
                 }

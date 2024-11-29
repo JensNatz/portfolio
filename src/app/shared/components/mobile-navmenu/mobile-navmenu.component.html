@@ -1,8 +1,8 @@
 <nav class="background-light">
     <ul>
-        <li class="nav-link"><a href="#">About me</a></li>
-        <li class="nav-link"><a href="#">Skillset</a></li>
-        <li class="nav-link"><a href="#">My work</a></li>
-        <li class="nav-link"><a href="#">Contact</a></li>
+        <li class="nav-link"><a (click)="onNavigate('about')">{{ 'about.title' | translate }}</a></li>
+        <li class="nav-link"><a (click)="onNavigate('skillset')">Skillset</a></li>
+        <li class="nav-link"><a (click)="onNavigate('projects')">{{ 'projects.title' | translate }}</a></li>
+        <li class="nav-link"><a (click)="onNavigate('contact')">{{ 'contact.title' | translate }}</a></li>
     </ul>
 </nav>

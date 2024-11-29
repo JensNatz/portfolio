@@ -26,11 +26,19 @@ div.project {
 
         h3 {
             color: $base-color;
+            @media (max-width: $breakpoint-lg) {
+                text-align:center
+            }
+            
         }
 
         > .technologies {
             color: $base-color;
             font-size: 24px;
+
+            @media (max-width: $breakpoint-lg) {
+                text-align:center
+            }
         }
 
         div.buttons {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-burger-icon',
@@ -9,7 +9,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './burger-icon.component.scss'
 })
 export class BurgerIconComponent {
-  isActive = false;
+  @Input() isActive = false;
   @Output() menuClicked = new EventEmitter<void>();
 
   onMenuClick(): void {

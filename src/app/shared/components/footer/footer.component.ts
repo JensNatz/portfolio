@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { SocialIconComponent } from '../social-icon/social-icon.component';
 import { SocialIcon } from '../../../models/social-icon';
 import {TranslatePipe} from "@ngx-translate/core";
@@ -16,7 +18,7 @@ export class FooterComponent {
 
   socialIcons:SocialIcon[] = [
     {
-      link: 'mailto:mail@jens-natzschka.com',
+      link: '#contact',
       img: 'email.svg',
       alt: 'Email'
     },

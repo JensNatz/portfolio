@@ -11,8 +11,8 @@
             <li class="nav-link"><a href="#contact">{{ 'contact.title' | translate }}</a></li>
         </ul>
         <div class="menu-icon">
-            <app-burger-icon  (menuClicked)="onMenuToggle()"></app-burger-icon>
+            <app-burger-icon (menuClicked)="onMenuToggle()" [isActive]="isMenuOpen"></app-burger-icon>
         </div> 
     </div>
 </nav>
-<app-mobile-navmenu [class.menu-open]="isMenuOpen"></app-mobile-navmenu>
+<app-mobile-navmenu [class.menu-open]="isMenuOpen" (menuClosed)="onMenuToggle()"></app-mobile-navmenu>

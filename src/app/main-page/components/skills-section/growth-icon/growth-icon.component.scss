@@ -4,13 +4,19 @@
 
 div.growth-icon {
     @include flex($direction: column);
-    gap: 16px;
+    gap: 8px;
     position: relative;
+    margin-bottom: 16px;
 
     >img {
         height: 75px;
         width: auto;
         transition: all 0.125s ease;
+        margin: 8px 26px;
+
+        @media (max-width: $breakpoint-md) {
+            height: 60px;
+        }
     }
 
     >span {
