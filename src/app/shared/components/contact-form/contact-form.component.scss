@@ -46,19 +46,6 @@ form {
     >input {
         height: 48px;
         position: relative;
-
-        &::after {
-            content: "";
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 26px;
-            height: 26px;
-            background-image: url('/assets/img/invalid.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
     }
 
     >textarea {
@@ -91,10 +78,39 @@ form {
     }
 }
 
+%validation-icon {
+    &::after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
 .invalid {
-    border: 1px solid red;
-    padding-right: 30px;
-    position: relative;
+    @extend %validation-icon;
+    &::after {
+        background-image: url('/assets/img/invalid.svg');
+    }
+}
+
+.valid {
+    @extend %validation-icon;
+    &::after {
+        background-image: url('/assets/img/valid.svg');
+    }
+}
+
+.invalid-message {
+    color: $color-error;
+    font-size: 12px;
+    margin-top: -16px;
+    margin-left: 24px;
 }
 
 div.toastmessage {

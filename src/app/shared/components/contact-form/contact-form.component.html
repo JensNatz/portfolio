@@ -1,22 +1,25 @@
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <div class="input-container">
-        <input [(ngModel)]="formData.name" type="text" name="name" id="name" required placeholder="">
+    <div class="input-container" [ngClass]="{'invalid': name.invalid && name.touched, 'valid': !name.invalid}">
+        <input [(ngModel)]="formData.name" type="text" name="name" id="name" required #name="ngModel" placeholder="">
         <label for="name"> {{ 'form.name' | translate }} *</label>
     </div>
-    <div class="input-container">
-        <input [(ngModel)]="formData.email" [ngClass]="{'invalid': email.invalid && email.touched}" name="email" type="email" id="email" required #email="ngModel" placeholder="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+    <span class="invalid-message" *ngIf="name.invalid && name.touched">
+        {{ 'form.name.invalid' | translate }}
+    </span>
+    <div class="input-container" [ngClass]="{'invalid': email.invalid && email.touched, 'valid': !email.invalid}">
+        <input [(ngModel)]="formData.email" name="email" type="email" id="email" required #email="ngModel" placeholder="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
         <label for="email">{{ 'form.email' | translate }} *</label>
-        <!-- <div *ngIf="email.invalid && email.touched">
-            Bitte geben Sie eine gültige E-Mail-Adresse ein.
-          </div>
-          <div *ngIf="email.valid && email.touched">
-            das ist eine korrekte Emailadresse
-          </div> -->
     </div>
-    <div class="input-container">
-        <textarea [(ngModel)]="formData.message" name="message" id="message" cols="8" required placeholder=""></textarea>
+    <span class="invalid-message" *ngIf="email.invalid && email.touched">
+        {{ 'form.email.invalid' | translate }}
+    </span>
+    <div class="input-container" [ngClass]="{'invalid': message.invalid && message.touched, 'valid': !message.invalid}">
+        <textarea [(ngModel)]="formData.message" name="message" id="message" cols="8" required #message="ngModel" placeholder=""></textarea>
         <label for="message">{{ 'form.message' | translate }} *</label>
     </div>
+    <span class="invalid-message" *ngIf="message.invalid && message.touched">
+        {{ 'form.message.invalid' | translate }}
+    </span>
     <div class="input-privacy">
         <input ngModel type="checkbox" name="privacy" id="privacy" required>
         <label for="privacy">
