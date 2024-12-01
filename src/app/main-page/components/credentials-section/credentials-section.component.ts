@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CredentialEntry } from '../../../models/credential-entry';
 import {TranslatePipe, TranslateService} from "@ngx-translate/core";
 import { Subscription } from 'rxjs';
-
+import AOS from 'aos';  
 
 @Component({
   selector: 'app-credentials-section',
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './credentials-section.component.html',
   styleUrl: './credentials-section.component.scss'
 })
-export class CredentialsSectionComponent {
+export class CredentialsSectionComponent implements OnInit {
 
   translateService = inject(TranslateService);
   private langChangeSubscription: Subscription | null = null;
@@ -40,6 +40,7 @@ export class CredentialsSectionComponent {
   ];
 
   ngOnInit() {
+    AOS.init();
     this.langChangeSubscription = this.translateService.onLangChange.subscribe((event) => {
       this.currentLanguage = event.lang; 
     });

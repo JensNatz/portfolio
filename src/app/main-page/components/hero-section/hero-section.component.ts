@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SocialIcon } from '../../../models/social-icon';
 import { SocialIconComponent } from '../../../shared/components/social-icon/social-icon.component';
-import {TranslatePipe} from "@ngx-translate/core";
+import { TranslatePipe } from "@ngx-translate/core";
+import AOS from 'aos';
 
 @Component({
   selector: 'app-hero-section',
@@ -11,7 +12,7 @@ import {TranslatePipe} from "@ngx-translate/core";
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
-export class HeroSectionComponent {
+export class HeroSectionComponent implements OnInit {
 
   socialIcons:SocialIcon[] = [
     {
@@ -29,4 +30,8 @@ export class HeroSectionComponent {
       alt: 'LinkedIn'
     }
   ];
+
+  ngOnInit() {
+    AOS.init({once: true});
+  }
 }

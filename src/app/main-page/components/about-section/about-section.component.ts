@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {TranslatePipe} from "@ngx-translate/core";
+import AOS from 'aos';
 
 
 @Component({
@@ -9,6 +10,10 @@ import {TranslatePipe} from "@ngx-translate/core";
   templateUrl: './about-section.component.html',
   styleUrl: './about-section.component.scss'
 })
-export class AboutSectionComponent {
+export class AboutSectionComponent implements OnInit {
+
+  ngOnInit() {
+    AOS.init();
+  }
 
 }
