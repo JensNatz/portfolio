@@ -16,6 +16,7 @@ section {
     >div.content {
         @include flex;
         z-index: 1;
+        position: relative;
 
         @media (max-width: $breakpoint-md) {
             @include flex($direction:column-reverse, $justify: space-between);
@@ -31,7 +32,7 @@ section {
             padding-top: 104px;
         }
 
-        > div {
+        > div.main-content {
             @include flex($direction: column);
             flex: 1;
             height: 100vh;
@@ -66,9 +67,7 @@ div.greeting-container {
     @media (max-width: $breakpoint-md) {
         flex-shrink: 1;
         max-height: 30%;
-
     }
-
 }
 
 h1 {
@@ -129,6 +128,7 @@ span.greeting {
     height: 890px;
     top: -400px;
     left: -400px;
+    z-index: -1;
 
     @media (max-width: $breakpoint-xl) {
         top: -500px;
@@ -138,8 +138,8 @@ span.greeting {
     @media (max-width: $breakpoint-lg) {
         width: 50vw;
         height: 50vw;
-        top: -25vh;
-        left: -25vw;
+        top: -20vw;
+        left: -20vw;
     }
 
     @media (max-width: $breakpoint-md) {
@@ -196,6 +196,10 @@ span.greeting {
         width: 1px;
         height: 100px;
         background-color: $base-color;
+
+        @media (max-height: $breakpoint-sm) {
+            height: 25px;
+        }
     }
 }
 

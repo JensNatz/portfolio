@@ -4,8 +4,6 @@ import { FormsModule, NgForm } from '@angular/forms';
 import {TranslatePipe} from "@ngx-translate/core";
 import { CommonModule } from '@angular/common';
 
-
-
 @Component({
   selector: 'app-contact-form',
   standalone: true,

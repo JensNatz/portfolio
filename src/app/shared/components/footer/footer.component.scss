@@ -15,7 +15,7 @@ footer {
         }
 
 
-        > div { 
+        > div.main { 
             width: 100%;
             @include flex($justify: space-between);
             position: relative;
@@ -45,9 +45,19 @@ footer {
                 }
               }
         }
+
+        > div.links {
+            @include flex();
+            gap: 16px;
+        }
     }
 }
 
 a {
+    cursor: pointer;
     color: $color-white;
+
+    &:hover {
+        font-weight: 700;
+    }
 }

@@ -3,21 +3,21 @@
         <input [(ngModel)]="formData.name" type="text" name="name" id="name" required #name="ngModel" placeholder="">
         <label for="name"> {{ 'form.name' | translate }} *</label>
     </div>
-    <span class="invalid-message" *ngIf="name.invalid && name.touched">
+    <span class="invalid-message" [class.show]="name.invalid && name.touched">
         {{ 'form.name.invalid' | translate }}
     </span>
     <div class="input-container" [ngClass]="{'invalid': email.invalid && email.touched, 'valid': !email.invalid}">
         <input [(ngModel)]="formData.email" name="email" type="email" id="email" required #email="ngModel" placeholder="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
         <label for="email">{{ 'form.email' | translate }} *</label>
     </div>
-    <span class="invalid-message" *ngIf="email.invalid && email.touched">
+    <span class="invalid-message" [class.show]="email.invalid && email.touched">
         {{ 'form.email.invalid' | translate }}
     </span>
     <div class="input-container" [ngClass]="{'invalid': message.invalid && message.touched, 'valid': !message.invalid}">
         <textarea [(ngModel)]="formData.message" name="message" id="message" cols="8" required #message="ngModel" placeholder=""></textarea>
         <label for="message">{{ 'form.message' | translate }} *</label>
     </div>
-    <span class="invalid-message" *ngIf="message.invalid && message.touched">
+    <span class="invalid-message" [class.show]="message.invalid && message.touched">
         {{ 'form.message.invalid' | translate }}
     </span>
     <div class="input-privacy">

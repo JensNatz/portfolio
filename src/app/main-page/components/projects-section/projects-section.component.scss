@@ -57,4 +57,10 @@ div.project-list {
     height: 380px;
     top: 1200px;
     left: 90%;
+
+    @media (min-width: $breakpoint-xxl) {
+        left: unset;
+        right: 0;
+        
+    }
 }
