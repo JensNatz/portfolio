@@ -1,6 +1,5 @@
 <app-navbar></app-navbar>
 <section class="background-light">
-    
     <div class="content">
         <div class="bubble"></div>
         <div class="main-content">
@@ -14,11 +13,11 @@
                 Developer
             </h1>
         </div>
-    </div>
-    <div class="social-icons">
-        @for (item of socialIcons; track item) {
-            <app-social-icon [icon]="item"></app-social-icon>
-        }
+        <div class="social-icons">
+            @for (item of socialIcons; track item) {
+                <app-social-icon [icon]="item"></app-social-icon>
+            }
+        </div>
     </div>
     <div class="scroll">
         <span>Scroll</span>

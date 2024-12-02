@@ -8,7 +8,7 @@ import {TranslatePipe} from "@ngx-translate/core";
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [SocialIconComponent, TranslatePipe, RouterLink],
+  imports: [SocialIconComponent, TranslatePipe],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

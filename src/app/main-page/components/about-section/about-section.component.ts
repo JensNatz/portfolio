@@ -16,4 +16,11 @@ export class AboutSectionComponent implements OnInit {
     AOS.init();
   }
 
+  scrollToContactForm() {
+    const nameField = document.querySelector('#contact #name') as HTMLElement;
+    if (nameField) {
+      nameField.focus();
+    }
+    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
