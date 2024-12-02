@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Skill } from '../../../models/skill';
 import { GrowthIconComponent } from './growth-icon/growth-icon.component';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-skills-section',
@@ -9,7 +10,11 @@ import { GrowthIconComponent } from './growth-icon/growth-icon.component';
   templateUrl: './skills-section.component.html',
   styleUrl: './skills-section.component.scss'
 })
-export class SkillsSectionComponent {
+export class SkillsSectionComponent implements OnInit {
+
+  ngOnInit() {
+    AOS.init();
+  }
 
   skills: Skill[] = [
     

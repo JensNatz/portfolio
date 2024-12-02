@@ -4,7 +4,7 @@
 form {
     flex: 1;
     @include flex($align: start, $direction: column);
-    gap: 32px;
+    gap: 16px;
 
     >div.input-privacy {
 
@@ -109,8 +109,15 @@ form {
 .invalid-message {
     color: $color-error;
     font-size: 12px;
-    margin-top: -16px;
-    margin-left: 24px;
+    margin: -8px 0 8px 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.125s ease-in-out, visibility 0.125s ease-in-out;
+}
+
+.invalid-message.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 div.toastmessage {

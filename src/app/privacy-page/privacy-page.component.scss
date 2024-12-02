@@ -1,0 +1,76 @@
+@import '../../app/shared/variables';
+@import '../../app/shared/mixins';
+
+
+
+section {
+    >div.content {     
+       padding-top: 36px;
+
+        @media (max-width: $breakpoint-md) {
+        padding-top: 24px;
+
+        > div{
+            margin-bottom: 24px;
+        }
+    }
+    }
+}
+
+
+nav {
+    @include flex($justify: space-between);
+    height: 88px;
+
+    @media (max-width: $breakpoint-md) {
+        height: 48px;
+    }
+
+    > a {
+        @include flex();
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+            > img {
+                transform: scale(1.1) rotate(-90deg);
+            }
+        }
+
+
+        > img {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+h1 {
+    color: $base-color;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+h2 {
+    color: $base-color;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 32px 0 16px 0;
+}
+
+h3 {
+    color: $base-color;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 24px 0 16px 0;
+}
+
+h4 {
+    color: $base-color;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 16px 0 8px 0;
+}
+
+p {
+    margin-bottom: 12px;
+}

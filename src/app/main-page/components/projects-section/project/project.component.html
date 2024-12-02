@@ -1,4 +1,4 @@
-<div class="project" [class.reverse]="index % 2 !== 0">
+<div class="project" [class.reverse]="index % 2 !== 0" [attr.data-aos]="index % 2 !== 0 ? 'fade-left' : 'fade-right'">
     <div>
         <img [src]="'assets/img/' + project.img" alt="{{ project.title }}">
     </div>  

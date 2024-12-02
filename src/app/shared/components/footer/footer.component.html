@@ -1,6 +1,6 @@
 <footer class="background-dark">
     <div class="content">
-        <div>
+        <div class="main">
             <img src="assets/img/logo.svg" alt="Logo">
             <span>&copy; {{ year }}</span>
             <div class="social-icons">
@@ -9,6 +9,9 @@
                 }
             </div>
         </div>
-        <a href="imprint">{{ 'general.imprint' | translate }}</a>
+        <div class="links">
+            <a routerLink="/imprint">{{ 'general.imprint' | translate }}</a>
+            <a routerLink="/privacy">{{ 'general.privacy' | translate }}</a>
+        </div>
     </div>
 </footer>

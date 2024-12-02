@@ -2,6 +2,8 @@ import { Component, Input, inject } from '@angular/core';
 import { Project } from '../../../../models/project';
 import {TranslatePipe, TranslateService} from "@ngx-translate/core";
 import { Subscription } from 'rxjs';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-project',
@@ -16,6 +18,7 @@ export class ProjectComponent {
   currentLanguage = this.translateService.currentLang;
 
   ngOnInit() {
+    AOS.init();
     this.langChangeSubscription = this.translateService.onLangChange.subscribe((event) => {
       this.currentLanguage = event.lang; 
     });
