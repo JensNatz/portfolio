@@ -20,7 +20,6 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    word-break: break-all;
 }
 
 body {
@@ -56,6 +55,11 @@ body {
     scrollbar-width: 8px;
     scrollbar-color: #888 #f1f1f1;
   }
+
+h1, h2, h3, h4, h5, h6 {
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
 
 h1 {
     font-family: 'Baloo';
