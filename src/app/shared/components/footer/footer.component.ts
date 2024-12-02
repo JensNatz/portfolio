@@ -48,6 +48,7 @@ export class FooterComponent {
       img: 'linkedin.svg',
       alt: 'LinkedIn'
     }
-  ]
+  ];
+  
 
 }

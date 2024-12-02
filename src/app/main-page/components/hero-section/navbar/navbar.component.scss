@@ -32,14 +32,10 @@ nav {
             }
         }
 
-        
-
         >ul {
             @include flex();
             gap: 24px;
             list-style-type: none;
-
-          
 
             @media (max-width: $breakpoint-md) {
                 display: none;
@@ -57,13 +53,11 @@ nav {
 
         > a {
             font-weight: 700;
-            margin: 0 -4px;
         }
     }
 
     >a {
         font-size: 24px;
-        padding: 0 4px; 
 
         &:hover {
             color: $base-color;
